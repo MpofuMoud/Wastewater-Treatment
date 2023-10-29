@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water treatment</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(99, 202, 236) 0%,
+          rgb(162, 162, 236) 90.2%
+        );
+      }
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: antiquewhite;
+        padding: 5px 8px;
+      }
+      .theme-button:hover {
+        background: #ffffff;
+        color: black;
+        cursor: pointer;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid orchid;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 10px 15px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: antiquewhite;
+        background: orchid;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: orchid;
+        font-size: 20px;
+      }
+      .intro-pic {
+        border-radius: 10px;
+        transition: transform 150ms ease-in-out, filter 200ms ease-in-out;
+      }
+      .intro-pic:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: 15px 0;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: #ffffff;
+      }
+      .dark .container {
+        background: rgb(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+
+    <div class="container">
+      <h1>Water Treatment💦</h1>
+      <h2>Safe water for everyone!!!🙂</h2>
+      <a href="https://en.wikipedia.org/wiki/Water_treatment" target="_blank">
+        <img
+          class="intro-pic"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/894/original/water.jpg?1696357174"
+          alt="Drinking water"
+      /></a>
+      <div class="grid">
+        <img
+          class="img1"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/893/original/image_3.jpeg?1696357146"
+          alt="clean water"
+        />
+        <img
+          class="img2"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/907/original/Types-of-Water-Treatment.jpg?1696361184"
+          alt="plant"
+        />
+        <img
+          class="img3"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/891/original/image_1.jpeg?1696357112"
+          alt=""
+        />
+        <img
+          class="img4"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/895/original/tasks_lake_water_treatment.jpg?1696357192"
+          alt="purification"
+        />
+      </div>
+      <p>
+        Water treatment is any process that improves the quality of water to
+        make it appropriate for a specific end-use. The end use may be drinking,
+        industrial water supply, irrigation, river flow maintenance, water
+        recreation or many other uses, including being safely returned to the
+        environment. Water treatment removes contaminants and undesirable
+        components, or reduces their concentration so that the water becomes fit
+        for its desired end-use. This treatment is crucial to human health and
+        allows humans to benefit from both drinking and irrigation use.
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Water_treatment" target="_blank"
+          >📖Learn more on wiki</a
+        >
+      </p>
+
+      <button class="info">More Information</button>
+    </div>
+    <footer>coded by Moud Mpofu</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector("button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
